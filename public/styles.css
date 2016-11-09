@@ -1,0 +1,141 @@
+header {
+  height: 40px;
+  background: #f5f5f5
+}
+
+p.header_titles {
+  font-size: 16px;
+
+}
+
+p.repo-name {
+
+  font-size: 26px;
+  color: #0066ff;
+}
+
+p.user_name {
+
+  font-size: 30px;
+  font-weight: bold;
+}
+
+p.user_login {
+  font-size: 20px;
+    color: #767676;
+}
+
+p.add_bottom_line {
+  display: block;
+  height: 1px;
+  width: 65%;
+  margin: 1px;
+  background: #dddddd;
+}
+
+aside.info_side_bar {
+  float: left;
+  width: 25%;
+}
+
+article.repo_portion {
+  float: left;
+  width: 75%;
+}
+
+
+
+#try_all {
+    float: left;
+  text-transform: uppercase;
+  background: linear-gradient(#e6e6e6,  #cccccc);
+  border: 0.5px solid #e6e6e6;
+  -moz-border-bottom-colors: #858585 #A4A4A4 #C0C0C0;
+  -moz-border-top-colors: #858585 #A4A4A4 #C0C0C0;
+  -moz-border-left-colors: #858585 #A4A4A4 #C0C0C0;
+  -moz-border-right-colors: #858585 #A4A4A4 #C0C0C0;
+  padding: 0.7em;
+  width: 5em;
+  height: .7em;
+  position: relative;
+  border-radius: 3px;
+  color: #737373;
+  font-size: 16px;
+  font-weight: 200;
+  font-family: sans-serif;
+  margin: 0;
+  margin-left: 1em;
+}
+
+#try_all span {
+color: black
+}
+
+article input {
+    padding: 0.7em;
+    padding-left: 20em;
+    float: left;
+    margin-left: 20px;
+}
+
+header input {
+  margin-left: 200px;
+  padding: 0.3em;
+  padding-left: 10em;
+  float: left;
+}
+
+#language_all {
+  float: left;
+  text-transform: uppercase;
+  background: linear-gradient(#e6e6e6,  #cccccc);
+  border: 0.5px solid #e6e6e6;
+  -moz-border-bottom-colors: #858585 #A4A4A4 #C0C0C0;
+  -moz-border-top-colors: #858585 #A4A4A4 #C0C0C0;
+  -moz-border-left-colors: #858585 #A4A4A4 #C0C0C0;
+  -moz-border-right-colors: #858585 #A4A4A4 #C0C0C0;
+  padding: 0.7em;
+  width: 8em;
+  height: .7em;
+  position: relative;
+  border-radius: 3px;
+  color: #737373;
+  font-size: 16px;
+  font-weight: 200;
+  font-family: sans-serif;
+  margin: 0;
+  margin-left: 1em;
+}
+
+#language_all span {
+color: black
+}
+
+ul.personal_side_bar {
+  float: none;
+  list-style: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+ul.detail_repo_list {
+  list-style: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+}
+
+
+div.overview_tabs p {
+  list-style: none;
+  float: left;
+  padding-right:58px;
+  color: #767676;
+  margin: auto;
+  margin-left: 25px;
+}
+
+img {
+  border-radius: 5px;
+  width: 60%;
+}
