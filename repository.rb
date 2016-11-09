@@ -12,11 +12,11 @@ class Repository
   end
 
   def data
-    @data ||= HTTParty.get("#{BASE_URI}#{username}/repos?access_token=b0e10c57129db361460fa0bdea2ad75bed7903a1")
+    @data ||= HTTParty.get("#{BASE_URI}#{username}/repos")
   end
 
   def user_info
-    @user_info ||= HTTParty.get("#{BASE_URI}#{username}?access_token=b0e10c57129db361460fa0bdea2ad75bed7903a1")
+    @user_info ||= HTTParty.get("#{BASE_URI}#{username}")
   end
 
 #?access_token=b0e10c57129db361460fa0bdea2ad75bed7903a1
