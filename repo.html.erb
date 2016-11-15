@@ -6,29 +6,24 @@
   <link rel="stylesheet" href="/styles.css" media="screen">
 </head>
 <body>
-  <header><input type="text" name="top bar search" width = 100px>
-    <p class="header_titles">Pull request    &nbsp &nbsp &nbsp       Issues      &nbsp &nbsp &nbsp      Gist </p></header>
+    <header>
+      <input type="text" name="top bar search" width = 100px>
+      <ul class="header_titles">
+        <li>Pull request</li>
+        <li>Issues</li>
+        <li >Gist</li>
+      </ul>
+    </header>
     <main>
 
       <aside class="info_side_bar">
-
         <img src= '<%= @repo_list.user_info["avatar_url"] %>'>
 
         <p class ="user_name"><%= @repo_list.user_info["name"] %></p>
         <p class ="user_login"><%= @repo_list.user_info["login"] %></p>
-
       </aside>
 
-
-
       <article class="repo_portion">
-
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
 
         <div class="overview_tabs">
           <p >Overview</p>
@@ -39,45 +34,31 @@
           <p class ="add_bottom_line"> </p>
         </div>
 
-        <br>
-        <br>
-        <br>
+        <label for=""> </label>
+        <input type="text" name="Search repositories..." width = 100px>
+        <p id="try_all">Type: <span>All<span> </p>
+          <p id="language_all">Language: <span>All<span> </p>
 
+            <p class ="add_bottom_line"> </p>
 
-          <label for=""> </label>
-          <input type="text" name="Search repositories..." width = 100px>
-          <p id="try_all">Type: <span>All<span> </p>
-            <p id="language_all">Language: <span>All<span> </p>
+            <ul class="detail_repo_list">
+              <% @repo_list.data.each do |el| %>
+              <li>
+                <p class ="repo-name"><%= el['name'] %> </p>
+                <p class ="repo-description"><%= el['description'] %></p>
+                <p class ="repo-grouping"> <%= el['language'] %>Updated: <%= el['updated_at'] %> </p>
+                <p class ="add_bottom_line"> </p>
+              </li>
+              <% end %>
+            </ul>
 
+          </article>
 
-              <br>
-              <br>
-              <br>
-              <p class ="add_bottom_line"> </p>
-              <br>
-              <br>
+        <div class="clearfix"></div>
 
-              <ul class="detail_repo_list">
-                <% @repo_list.data.each do |el| %>
-                <table>
-                  <p class ="repo-name"><%= el['name'] %> </p>
-                  <p><%= el['description'] %></p>
-                  <p> <%= el['language'] %>  &nbsp &nbsp Updated: <%= el['updated_at'] %> </p>
-                  <p class ="add_bottom_line"> </p>
-
-                  <br>
-                </table>
-                <% end %>
-              </ul>
-
-            </article>
-
-          <div class="clearfix"></div>
-
-          <footer>
-            This page was made in <%= Time.now.strftime("%B") %>
-          </footer>
-        </main>
-
-      </body>
-      </html>
+        <footer>
+          This page was made in <%= Time.now.strftime("%B") %>
+        </footer>
+      </main>
+    </body>
+    </html>
