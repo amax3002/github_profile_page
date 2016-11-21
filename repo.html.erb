@@ -6,53 +6,64 @@
   <link rel="stylesheet" href="/styles.css" media="screen">
 </head>
 <body>
-    <header>
-      <input type="text" name="top bar search" width = 100px>
-      <ul class="header_titles">
-        <li>Pull request</li>
-        <li>Issues</li>
-        <li >Gist</li>
-      </ul>
-    </header>
-    <main>
+  <header>
+    <input type="text" name="top bar search" width = 100px>
+    <ul class="header_titles">
+      <li>Pull request</li>
+      <li>Issues</li>
+      <li >Gist</li>
+    </ul>
+  </header>
+  <main>
 
-      <aside class="info_side_bar">
-        <img src= '<%= @repo_list.user_info["avatar_url"] %>'>
+    <aside class="info_side_bar">
+      <img src= '<%= @repo_list.user_info["avatar_url"] %>'>
 
-        <p class ="user_name"><%= @repo_list.user_info["name"] %></p>
-        <p class ="user_login"><%= @repo_list.user_info["login"] %></p>
-      </aside>
+      <p class ="user_name"><%= @repo_list.user_info["name"] %></p>
+      <p class ="user_login"><%= @repo_list.user_info["login"] %></p>
+      <div class ="bottom_info">
+        <p>
+          <%= @repo_list.user_info["email"] %>
+        </p>
+        <p>
+          Joined on <%= @repo_list.user_info["created_at"] %>
+        </p>
+      </div>
+    </aside>
 
-      <article class="repo_portion">
+    <article class="repo_portion">
 
-        <div class="overview_tabs">
-          <p >Overview</p>
-          <p>Repositories</p>
-          <p>Stars</p>
-          <p>Followers</p>
-          <p>Following</p>
+      <div class="overview_tabs">
+        <p >Overview</p>
+        <p>Repositories</p>
+        <p>Stars</p>
+        <p>Followers</p>
+        <p>Following</p>
+        <p class ="add_bottom_line"> </p>
+      </div>
+
+      <label for=""> </label>
+      <input type="text" name="Search repositories..." width = 100px>
+      <p id="try_all">Type: <span>All<span> </p>
+        <p id="language_all">Language: <span>All<span> </p>
+
           <p class ="add_bottom_line"> </p>
-        </div>
 
-        <label for=""> </label>
-        <input type="text" name="Search repositories..." width = 100px>
-        <p id="try_all">Type: <span>All<span> </p>
-          <p id="language_all">Language: <span>All<span> </p>
+          <ul class="detail_repo_list">
+            <% @repo_list.data.each do |el| %>
+            <li>
+              <p class ="repo-name"><%= el['name'] %> </p>
+              <div class="details">
+                <span><p class ="repo-description"><%= el['description'] %></p></span>
+                <p class ="repo-grouping"> <%= el['language']   %>   Updated: <%= el['updated_at'] %> </p>
+              </div>
 
-            <p class ="add_bottom_line"> </p>
+              <hr>
+            </li>
+            <% end %>
+          </ul>
 
-            <ul class="detail_repo_list">
-              <% @repo_list.data.each do |el| %>
-              <li>
-                <p class ="repo-name"><%= el['name'] %> </p>
-                <p class ="repo-description"><%= el['description'] %></p>
-                <p class ="repo-grouping"> <%= el['language'] %>Updated: <%= el['updated_at'] %> </p>
-                <p class ="add_bottom_line"> </p>
-              </li>
-              <% end %>
-            </ul>
-
-          </article>
+        </article>
 
         <div class="clearfix"></div>
 

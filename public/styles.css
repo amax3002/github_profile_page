@@ -17,7 +17,6 @@ float: left;
 }
 
 p.repo-name {
-  float: left;
   font-size: 26px;
   color: #0066ff;
 }
@@ -30,7 +29,7 @@ p.user_name {
 }
 
 p.user_login {
-  font-size: 20px;
+  font-size: 22px;
   color: #767676;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -135,27 +134,40 @@ ul.personal_side_bar {
 
 ul.detail_repo_list {
   list-style: none;
-  margin-top: 5px;
+
   margin-bottom: 5px;
   padding-top: 40px;
-  display: block;
-  padding-right: 40px;
 
 }
 
-p.repo-grouping {
-padding-right: 40px;
-padding-top: 40px;
+.repo-description {
+    color: grey;
+}
 
+p.repo-grouping {
+  font-size: 12px;
+  color: grey;
+}
+
+p span
+{
+    display: block;
 }
 
 div.overview_tabs p {
   list-style: none;
   float: left;
   padding-right:58px;
-  color: #767676;
   margin: auto;
   margin-left: 25px;
+  color: grey;
+}
+
+div.bottom_info {
+  font-size: 16px;
+  display: block;
+  padding-top: 10px;
+
 }
 
 img {

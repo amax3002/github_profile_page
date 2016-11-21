@@ -12,11 +12,11 @@ class Repository
   end
 
   def data
-    @data ||= HTTParty.get("#{BASE_URI}#{username}/repos")
+    @data ||= HTTParty.get("#{BASE_URI}#{username}/repos?access_token=#{ENV["GITHUB_TOKEN"]}")
   end
 
   def user_info
-    @user_info ||= HTTParty.get("#{BASE_URI}#{username}")
+    @user_info ||= HTTParty.get("#{BASE_URI}#{username}?access_token=#{ENV["GITHUB_TOKEN"]}")
   end
 
 #?access_token=b0e10c57129db361460fa0bdea2ad75bed7903a1
